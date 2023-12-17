@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+		{% block content %}
+			<div> 
+				<a href="{{ url_for('profile') }}">Profile</a>
+				<a href="/">Logout</a>
+			</div>
+			<h1>Data</h1>
+			<table>
+			<tr><th><img alt="userspic" src="data:image/png;base64, {{ udata }}" width="72px" align="center" vspace="5" hspace="5"></th>
+			<th><img alt="pagespic" src="data:image/png;base64, {{ pdata }}" width="72px" align="center" vspace="5" hspace="5"></th></tr>
+			<tr><td align="middle"><div><a href="{{ url_for('mongousers') }}">Users</a></div></td>
+			<td align="middle"><div><a href="{{ url_for('mongopages') }}">Pages</a></div></td></tr>
+{% endblock %}
